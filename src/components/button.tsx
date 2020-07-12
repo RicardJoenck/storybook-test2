@@ -6,6 +6,5 @@ const Button = styled.button`
 `;
 
 export function TraderButton(props: any) {
-  console.log(props);
   return <Button onClick={props.onClick}>{props.children}</Button>;
 }
