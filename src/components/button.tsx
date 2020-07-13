@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode, FC } from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
@@ -8,13 +8,15 @@ const Button = styled.button`
 interface Props {
   disabled?: boolean;
   onClick: () => void;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-export function TraderButton({ children, disabled, onClick }: Props): JSX.Element {
+const TraderButton: FC<Props> = ({ children, disabled = false, onClick }: Props) => {
   return (
     <Button disabled={disabled} onClick={onClick}>
       {children}
     </Button>
   );
-}
+};
+
+export default TraderButton;

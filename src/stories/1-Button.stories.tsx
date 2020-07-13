@@ -1,6 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { TraderButton } from '../components/button';
+import TraderButton from '../components/button';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 
 export default {
