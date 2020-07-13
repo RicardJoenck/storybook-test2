@@ -2,9 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  background-color: red;
+  border-radius: 4px;
 `;
 
-export function TraderButton(props: any) {
-  return <Button onClick={props.onClick}>{props.children}</Button>;
+interface Props {
+  disabled?: boolean;
+  onClick: () => void;
+  children: React.ReactNode;
+}
+
+export function TraderButton({ children, disabled, onClick }: Props): JSX.Element {
+  return (
+    <Button disabled={disabled} onClick={onClick}>
+      {children}
+    </Button>
+  );
 }
